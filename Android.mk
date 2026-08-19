@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE), ysl)
+ifeq ($(TARGET_DEVICE), Mi8953)
 
 LOCAL_PATH := $(call my-dir)
 

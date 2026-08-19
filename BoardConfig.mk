@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/ysl
+LOCAL_PATH := device/xiaomi/Mi8953
 
 # Build
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -23,19 +23,11 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := ysl
+TARGET_BOOTLOADER_BOARD_NAME := Mi8953
 TARGET_NO_BOOTLOADER := true
 
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
-
-# Crypto
-TW_INCLUDE_CRYPTO := true
-
-# Encryption
-PLATFORM_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 16.1.0
-BOARD_USES_QCOM_FBE_DECRYPTION := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive androidboot.usbconfigfs=true loop.max_part=7 audit=0
@@ -45,7 +37,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_VERSION := 4.9
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_PREBUILT_KERNEL := device/xiaomi/ysl/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/xiaomi/Mi8953/prebuilt/Image.gz-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
@@ -73,7 +65,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP Configuration
-TW_DEVICE_VERSION := Redmi S2 | RenzAlt
+TW_DEVICE_VERSION := Mi8953 | RenzAlt
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"

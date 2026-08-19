@@ -1,5 +1,5 @@
-# android_device_xiaomi_ysl
+# android_device_xiaomi_Mi8953
 
-TWRP for Xiaomi Redmi S2/Y2
+TWRP for Xiaomi Mi8953
 
 
