@@ -29,6 +29,8 @@ TARGET_NO_BOOTLOADER := true
 # VINTF
 PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
+TARGET_OTA_ASSERT_DEVICE := mi8953,mido,vince,ysl,Mi8953
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
