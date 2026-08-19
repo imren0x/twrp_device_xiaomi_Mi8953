@@ -1,3 +1,8 @@
+<!--
+    Input:
+        manifest.xml
+        framework_manifest.xml
+-->
 <manifest version="2.0" type="framework">
     <hal format="hidl">
         <name>android.frameworks.displayservice</name>
@@ -30,16 +35,6 @@
         <fqname>@1.0::ISensorManager/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.frameworks.stats</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IStats</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IStats/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hidl.manager</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -48,16 +43,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.2::IServiceManager/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hidl.allocator</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAllocator</name>
-            <instance>ashmem</instance>
-        </interface>
-        <fqname>@1.0::IAllocator/ashmem</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hidl.memory</name>
@@ -78,16 +63,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ITokenManager/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.system.suspend</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISystemSuspend</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISystemSuspend/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.system.net.netd</name>
@@ -112,6 +87,26 @@
     <hal format="native">
         <name>netutils-wrapper</name>
         <version>1.0</version>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.radio.atcmdfwd</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAtCmdFwd</name>
+            <instance>AtCmdFwdService</instance>
+        </interface>
+        <fqname>@1.0::IAtCmdFwd/AtCmdFwdService</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.sigma_miracast</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>Isigma_miracast</name>
+            <instance>sigmahal</instance>
+        </interface>
+        <fqname>@1.0::Isigma_miracast/sigmahal</fqname>
     </hal>
     <system-sdk>
         <version>28</version>
