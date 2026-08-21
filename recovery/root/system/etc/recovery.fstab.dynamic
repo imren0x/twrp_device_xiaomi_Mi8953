@@ -1,5 +1,10 @@
 system                                          /system                 ext4     rw,barrier=1,discard                                           wait,logical
-product                                         /product                ext4     rw,barrier=1,discard                                           wait,logical
-vendor                                          /vendor                 ext4     rw,barrier=1,discard                                           wait,logical
-odm                                             /odm                    ext4     rw,barrier=1,discard                                           wait,logical
+system                                          /system                 erofs    rw,barrier=1,discard                                           wait,logical
 system_ext                                      /system_ext             ext4     rw,barrier=1,discard                                           wait,logical
+system_ext                                      /system_ext             erofs    rw,barrier=1,discard                                           wait,logical
+product                                         /product                ext4     rw,barrier=1,discard                                           wait,logical
+product                                         /product                erofs    rw,barrier=1,discard                                           wait,logical
+vendor                                          /vendor                 ext4     rw,barrier=1,discard                                           wait,logical
+vendor                                          /vendor                 erofs    rw,barrier=1,discard                                           wait,logical
+odm                                             /odm                    ext4     rw,barrier=1,discard                                           wait,logical
+odm                                             /odm                    erofs    rw,barrier=1,discard                                           wait,logical
