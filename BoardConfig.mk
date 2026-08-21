@@ -100,7 +100,7 @@ TW_THEME := portrait_hdpi
 TW_NEW_ION_HEAP := true
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_HAS_EDL_MODE := false
+TW_HAS_EDL_MODE := true
 TW_USE_FSCRYPT_POLICY := 1
 
 # TWRP Debug Flags
