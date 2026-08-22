@@ -13,13 +13,6 @@ service detect-dynamic-partitions /system/bin/detect-dynamic-partitions.sh
     oneshot
     seclabel u:r:recovery:s0
 
-service detect-userdata-encryption /system/bin/detect-userdata-encryption.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
 service set-device-props /system/bin/set-device-props.sh
     user root
     group root
@@ -37,6 +30,5 @@ on boot
 
 on init
     start detect-dynamic-partitions
-    start detect-userdata-encryption
     start set-device-props
 
