@@ -31,6 +31,18 @@ PRODUCT_ENFORCE_VINTF_MANIFEST := true
 
 TARGET_OTA_ASSERT_DEVICE := mi8953,mido,vince,ysl,Mi8953
 
+# Crypto
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_USE_FSCRYPT_POLICY := 1
+
+TARGET_CRYPTFS_HW_PATH := $(LOCAL_PATH)/cryptfs_hw
+TARGET_HW_DISK_ENCRYPTION := true
+
+PLATFORM_VERSION := 16.1.0
+PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
+PLATFORM_SECURITY_PATCH := 2099-12-31
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.usbconfigfs=true
@@ -102,8 +114,10 @@ TW_EXCLUDE_TWRPAPP := false
 TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
 TW_EXCLUDE_APEX := true
+TW_ENABLE_BLKDISCARD := true
 TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_FUSE_NTFS := true
 
 # TWRP Debug Flags
 TWRP_INCLUDE_LOGCAT := true

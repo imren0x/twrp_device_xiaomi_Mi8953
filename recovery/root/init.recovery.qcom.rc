@@ -4,17 +4,39 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import /init.recovery.qcom_decrypt.rc
+
+service detect-dynamic-partitions /system/bin/detect-dynamic-partitions.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service detect-userdata-encryption /system/bin/detect-userdata-encryption.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
+service set-device-props /system/bin/set-device-props.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-
-on init
-    exec u:r:recovery:s0 -- /system/bin/set-device-props.sh
-
-# Fstab
-on init
-    exec u:r:recovery:s0 -- /system/bin/detect-dynamic-partitions.sh
+    export ANDROID_ROOT /system_root
 
 on boot
     start health-hal-2-1
+
+on init
+    start detect-dynamic-partitions
+    start detect-userdata-encryption
+    start set-device-props
 
